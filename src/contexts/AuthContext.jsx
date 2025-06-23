@@ -17,8 +17,9 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   // Configure axios defaults
-  const API_URL = 'http://localhost:5000/api';
-  axios.defaults.baseURL = API_URL;
+  // const API_URL = 'http://localhost:5000/api';
+  const VITE_BACKEND_URL =  `https://cc7165509.onrender.com/api`;
+  axios.defaults.baseURL = VITE_BACKEND_URL;
 
   useEffect(() => {
     const token = localStorage.getItem('token');
